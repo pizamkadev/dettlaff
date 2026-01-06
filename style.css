@@ -1,0 +1,121 @@
+:root {
+  --bg: #0f1724;          /* tło strony */
+  --card: #0b1220;        /* tło kart */
+  --primary: #ff6b6b;     /* główny akcent */
+  --accent: #60c2ff;      /* drugi akcent */
+  --muted: #9aa4b2;       /* tekst pomocniczy */
+  --text: #e6eef8;        /* główny tekst */
+  --glass: rgba(255,255,255,0.04);
+  --button: #23c483;
+  --shadow: rgba(46, 229, 157, 0.4);
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+table tr:first-child {
+  background-color: var(--glass);
+}
+
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--text);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.02);
+}
+
+tr:hover {
+  background-color: rgba(255,255,255,0.04);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+a[href="insert.php"] {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: var(--button);
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+a[href="insert.php"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px var(--shadow);
+}
+
+form {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: var(--radius);
+  border: none;
+  background-color: var(--glass);
+  color: var(--text);
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--button);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px var(--shadow);
+}
